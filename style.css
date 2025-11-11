@@ -1,0 +1,206 @@
+/* --- Base reset --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* --- Background videos --- */
+.video-bg {
+    position: fixed;
+    /* behind everything, fills screen */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+    /* clicks pass through */
+    display: none;
+    /* default off; enabled via media queries below */
+}
+
+/* Optional readability scrim */
+.scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 180, 255, 0.15); /* Light blue tint */
+    z-index: 1; /* Between video and content */
+    pointer-events: none; /* Don’t block clicks */
+    mix-blend-mode: screen; /* keeps highlights soft */
+}
+/* --- Navbar overlay --- */
+.navbar {
+    position: fixed;
+    top: 15px;
+    /* <— creates the hanging effect (adjust 10–20px to taste) */
+    left: 0;
+    right: 0;
+    padding: 0.2rem 1.25rem;
+    /* <— reduces height */
+    background: rgba(38, 146, 235, 0.5) !important;
+    backdrop-filter: saturate(20%) blur(2px);
+    border-radius: 30px;
+    /* optional: soft edges add to floating effect */
+    width: calc(100% - 35px);
+    /* keeps equal gap on both sides */
+    margin: 0 auto;
+    /* center the bar horizontally */
+}
+
+/* Keep brand text visible on dark video */
+.navbar .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    /* reduced from 112px for proportion */
+    width: auto;
+    margin-right: .5rem;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6));
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    /* default color */
+    font-weight: 500;
+    padding: 0.75rem 1.25rem !important;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: darkblue;
+    background-color: #ffffff ;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    /* light blue hover color */
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) contrast(200%);
+}
+
+/* --- Hero content (centered) --- */
+.hero {
+    min-height: 100svh;
+    /* full viewport height, mobile-safe */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 5rem 1rem 3rem;
+}
+
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.brand-mark img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .35));
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: .5rem 0 0.75rem;
+    line-height: 1.1;
+    text-shadow: 0 10px 24px rgba(0, 0, 0, .4);
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    margin: 0 auto 1.25rem;
+    max-width: 65ch;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+}
+
+/* --- Content section after hero --- */
+.content {
+    background: #fff;
+    color: #111;
+    padding: 4rem 1.25rem;
+}
+
+.content .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Reduced motion: hide video, use poster fallback --- */
+@media (prefers-reduced-motion: reduce) {
+    .video-bg {
+        display: none !important;
+    }
+
+    .scrim {
+        background: none;
+    }
+
+    body {
+        background: #000 var(--poster, none) center/cover no-repeat;
+    }
+}
+
+/* --- Choose video by viewport aspect ratio --- */
+/* Landscape / wider viewports -> show horizontal (desktop/laptop) */
+@media (min-aspect-ratio: 4/3) {
+    .video-bg.landscape {
+        display: block;
+    }
+}
+
+/* Portrait / taller viewports -> show vertical (mobile) */
+@media (max-aspect-ratio: 4/3) {
+    .video-bg.portrait {
+        display: block;
+    }
+}
+@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
+  .navbar .nav-link {
+    display: block; /* to stretch full width */
+    width: 100%;  /* to ensure background fills width */
+    border-radius: 2rem;
+    padding: 0.9rem 1.25rem !important; /* slightly taller for touch devices */
+    text-align: left;/* to align text flush left */
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    background-color: #ffffff !important;
+    color: #0a2540 !important;
+    box-shadow: none; /* for cleaner mobile dropdown */
+  }
+}
