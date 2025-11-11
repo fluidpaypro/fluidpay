@@ -83,6 +83,7 @@ body {
     /* default color */
     font-weight: 500;
     padding: 0.75rem 1.25rem !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); 
     display: inline-block;
     border-radius: 2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -90,8 +91,9 @@ body {
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: darkblue;
+    color: #0a2540 ;
     background-color: #ffffff ;
+    text-shadow: none !important; 
     box-shadow: 0 0 10px rgba(255,255,255,0.3);
     /* light blue hover color */
 }
