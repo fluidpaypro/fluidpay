@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FluidPay — Contact Us</title>
+  <meta name="description" content="Get in touch with FluidPay — support, sales, partnerships." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- renamed to style.css -->
+  <link rel="stylesheet" href="stylec.css" />
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="nav container">
+      <a class="brand" href="index.html" aria-label="FluidPay home">
+        <img class="brand-logo" src="assets/Fluidwhite.png" alt="FluidPay logo" />
+        <!--<span class="brand-text">FluidPay</span>-->
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="contact.html" aria-current="page">Contact Us</a>
+        <a href="login.html">Log in</a>
+        <a class="cta" href="signup.html">Sign up</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <h1 id="hero-title">Let’s talk payments.</h1>
+      <p class="lead">Questions about pricing, integrations, or compliance? Send us a message and we’ll respond within one business day.</p>
+    </div>
+  </section>
+
+  <main class="section container grid">
+    <section class="card">
+      <h2 class="h3">Send us a message</h2>
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required minlength="2" />
+          <small class="error" data-for="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="jane@company.com" required />
+          <small class="error" data-for="email"></small>
+        </div>
+
+        <div class="field two">
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Billing question" required minlength="3" />
+            <small class="error" data-for="subject"></small>
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose…</option>
+              <option>Support</option>
+              <option>Sales</option>
+              <option>Partnerships</option>
+              <option>Compliance</option>
+            </select>
+            <small class="error" data-for="topic"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us a bit more…" required minlength="10"></textarea>
+          <small class="error" data-for="message"></small>
+        </div>
+
+        <label class="consent">
+          <input id="consent" name="consent" type="checkbox" required />
+          <span>I agree to be contacted about my inquiry.</span>
+        </label>
+        <small class="error" data-for="consent"></small>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Send message</button>
+          <a class="btn ghost" href="mailto:support@fluidpay.example">Email Support</a>
+        </div>
+
+        <p class="form-success" role="status" aria-live="polite" hidden>
+          Thanks! Your message has been sent. We’ll get back to you shortly.
+        </p>
+      </form>
+    </section>
+
+    <aside class="card">
+      <h2 class="h3">Contact details</h2>
+      <ul class="list">
+        <li><strong>Support</strong> — support@fluidpay.example</li>
+        <li><strong>Sales</strong> — sales@fluidpay.example</li>
+        <li><strong>Phone</strong> — +353 1 234 5678</li>
+        <li><strong>HQ</strong> — 123 Riverwalk, Dublin, Ireland</li>
+        <li><strong>Hours</strong> — Mon–Fri, 09:00–18:00 (GMT)</li>
+      </ul>
+
+      <div class="stat">
+        <div><span>API Status</span><strong class="ok">All systems operational</strong></div>
+        <div><span>Avg. first reply</span><strong>~ 2 hrs</strong></div>
+      </div>
+
+      <div class="map">
+        <iframe title="FluidPay HQ"
+          src="https://maps.google.com/maps?q=dublin&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"></iframe>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer container">
+    <div>© <span id="y"></span> FluidPay. All rights reserved.</div>
+    <div class="foot-links">Status • Privacy • Terms</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const burger = document.querySelector('.burger');
+    const links = document.querySelector('.links');
+    burger.addEventListener('click', ()=>{
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open');
+    });
+
+    const $ = s => document.querySelector(s);
+    const show = (k, msg='') => $(`.error[data-for="${k}"]`).textContent = msg;
+    const rules = {
+      name: v => v.trim().length >= 2 || 'Please enter your full name.',
+      email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || 'Enter a valid email address.',
+      subject: v => v.trim().length >= 3 || 'Subject should be at least 3 characters.',
+      topic: v => v.trim().length > 0 || 'Please select a topic.',
+      message: v => v.trim().length >= 10 || 'Message should be at least 10 characters.',
+      consent: v => v === true || 'Please agree to be contacted.'
+    };
+    ['name','email','subject','topic','message'].forEach(id=>{
+      const el = document.getElementById(id);
+      el.addEventListener('input', ()=>{
+        const res = rules[id](el.value);
+        show(id, res===true?'':res);
+      });
+    });
+    $('#consent').addEventListener('change', e=>{
+      const res = rules.consent(e.target.checked);
+      show('consent', res===true?'':res);
+    });
+    $('#contactForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      let ok = true;
+      ['name','email','subject','topic','message'].forEach(id=>{
+        const val = document.getElementById(id).value;
+        const res = rules[id](val);
+        show(id, res===true?'':res);
+        if(res!==true) ok=false;
+      });
+      const c = $('#consent'); const rc = rules.consent(c.checked);
+      show('consent', rc===true?'':rc); if(rc!==true) ok=false;
+      if(!ok) return;
+      e.target.reset();
+      document.querySelector('.form-success').hidden = false;
+      setTimeout(()=>document.querySelector('.form-success').hidden = true, 4000);
+    });
+  </script>
+</body>
+</html>
