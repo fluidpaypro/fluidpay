@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:root {
+  --shadow: 0 18px 60px rgba(10,37,64,0.95);
+}
+
 html,
 body {
     height: 100%;
@@ -45,12 +49,13 @@ body {
 .navbar {
     position: fixed;
     top: 15px;
-    /* <— creates the hanging effect (adjust 10–20px to taste) */
+    /* <— creates the hanging effect (adjust 10–20px to taste) */   
     left: 0;
     right: 0;
     padding: 0.2rem 1.25rem;
     /* <— reduces height */
-    background: rgba(38, 146, 235, 0.5) !important;
+    background: rgba(38, 146, 235, 0.7) !important;
+    box-shadow: var(--shadow);
     backdrop-filter: saturate(20%) blur(2px);
     border-radius: 30px;
     /* optional: soft edges add to floating effect */
@@ -58,6 +63,7 @@ body {
     /* keeps equal gap on both sides */
     margin: 0 auto;
     /* center the bar horizontally */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Keep brand text visible on dark video */
