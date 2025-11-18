@@ -1,0 +1,147 @@
+
+body{
+background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), 
+transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgba(90, 167, 255, .10), 
+transparent 60%), 
+linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
+ color: #edf2ff;
+ font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+	}
+.scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 180, 255, 0.15); /* Light blue tint */
+    z-index: 1; /* Between video and content */
+    pointer-events: none; /* Don’t block clicks */
+    mix-blend-mode: screen; /* keeps highlights soft */
+}
+/* --- Navbar overlay --- */
+.navbar {
+    position: fixed;
+    top: 15px;
+    /* <— creates the hanging effect (adjust 10–20px to taste) */   
+    left: 0;
+    right: 0;
+    padding: 0.2rem 1.25rem;
+    /* <— reduces height */
+    background: rgba(38, 146, 235, 0.7) !important;
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(20%) blur(2px);
+    border-radius: 30px;
+    /* optional: soft edges add to floating effect */
+    width: calc(100% - 35px);
+    /* keeps equal gap on both sides */
+    margin: 0 auto;
+    /* center the bar horizontally */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Keep brand text visible on dark video */
+.navbar .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    /* reduced from 112px for proportion */
+    width: auto;
+    margin-right: .5rem;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6));
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    /* default color */
+    font-weight: 500;
+    padding: 0.75rem 1.25rem !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); 
+    display: inline-block;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #0a2540 ;
+    background-color: #ffffff ;
+    text-shadow: none !important; 
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    /* light blue hover color */
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) contrast(200%);
+}
+
+	
+.container{
+		
+	width:100%;
+}
+
+.col-sm-4{
+	width: 100%
+	height: 250px;
+	align-items: center;
+	
+	
+	}
+	
+.row{
+	margin-top: 100px;
+	}
+.card{
+	 margin: auto;
+	 width: 90%;
+	  border: 3px #0a0f17;
+	  justify-content: center;
+	 
+	  }
+	  
+.card-body{
+background-color:black;
+	  
+	  
+	  }
+.card-img-top{
+	object-fit:cover !important;
+	height:15vw;
+	}
+	
+.card-img-top:hover{
+
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: 0.5;
+}
+
+	
+.card-text{
+	
+	text-align: center;
+	color:#edf2ff
+	}
+	
+.container{
+	height:250px;
+	}
+	
+.container1{
+	height:250px;
+	margin-left:300px; 
+	margin-right: 300px;
+	margin-top:150px;
+	text-align: center;
+	border-style: solid;
+	border: 3px #0a0f17;
+	
+	}
