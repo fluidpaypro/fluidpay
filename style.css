@@ -167,12 +167,9 @@ body {
 /* --- Content section after hero --- */
 .content {
     padding: 4rem 1.25rem;
-    color: #0a2540 ;
+    color: white;
     overflow-x: hidden;
-    background: radial-gradient(900px 600px at 85% -10%, rgb(246, 246, 246), 
-        transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgb(246, 248, 251), 
-        transparent 60%), 
-        linear-gradient(180deg,#ffffff, #ffffff,  60%, #ffffff);
+    background: rgba(38, 146, 235);
     font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 
 }
@@ -180,21 +177,6 @@ body {
 .content .container {
     max-width: 1000px;
     margin: 0 auto;
-}
-
-/* --- Reduced motion: hide video, use poster fallback --- */
-@media (prefers-reduced-motion: reduce) {
-    .video-bg {
-        display: none !important;
-    }
-
-    .scrim {
-        background: none;
-    }
-
-    body {
-        background: #000 var(--poster, none) center/cover no-repeat;
-    }
 }
 
 /* --- Choose video by viewport aspect ratio --- */
