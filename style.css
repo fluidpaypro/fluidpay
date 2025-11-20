@@ -47,13 +47,12 @@ body {
 .scrim {
     position: fixed;
     inset: 0;
-    background: rgba(10,37,64,0.90); /* Light blue tint */
-    z-index: 1; /* Between video and content */
+    background: rgba(38, 146, 235, 0.10); /* Light blue tint */
+    z-index: -1; /* Between video and content */
     pointer-events: none; /* Don’t block clicks */
-    mix-blend-mode: screen; /* keeps highlights soft */
 }
 /* --- Navbar overlay --- */
-.navbar {
+.navbar { 
     position: fixed;
     top: 15px;
     /* <— creates the hanging effect (adjust 10–20px to taste) */   
