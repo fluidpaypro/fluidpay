@@ -13,19 +13,19 @@ linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
     inset: 0;
     background: rgba(0, 180, 255, 0.15); /* Light blue tint */
     z-index: 1; /* Between video and content */
-    pointer-events: none; /* Don’t block clicks */
+    pointer-events: none; /* Donï¿½t block clicks */
     mix-blend-mode: screen; /* keeps highlights soft */
 }
 /* --- Navbar overlay --- */
 .navbar {
     position: fixed;
     top: 15px;
-    /* <— creates the hanging effect (adjust 10–20px to taste) */   
+    /* <ï¿½ creates the hanging effect (adjust 10ï¿½20px to taste) */   
     left: 0;
     right: 0;
     padding: 0.2rem 1.25rem;
-    /* <— reduces height */
-    background: rgba(38, 146, 235, 0.7) !important;
+    /* <ï¿½ reduces height */
+    background: rgba(38, 146, 235, 0.8) !important;
     box-shadow: var(--shadow);
     backdrop-filter: saturate(20%) blur(2px);
     border-radius: 30px;
@@ -93,9 +93,8 @@ linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
 	width: 100%
 	height: 250px;
 	align-items: center;
-	
-	
-	}
+    margin: rgba(38, 146, 235);    
+}
 	
 .row{
 	margin-top: 100px;
@@ -109,10 +108,11 @@ linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
 	  }
 	  
 .card-body{
-background-color:black;
-	  
-	  
-	  }
+background: rgba(38, 146, 235);
+font-weight: bold;
+	  	  
+}
+
 .card-img-top{
 	object-fit:cover !important;
 	height:15vw;

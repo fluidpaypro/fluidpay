@@ -16,9 +16,14 @@ body {
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: #fff;
+    color: rgba(109, 240, 255, .10);
     overflow-x: hidden;
+    background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), 
+        transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgba(90, 167, 255, .10), 
+        transparent 60%), 
+        linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
 }
 
 /* --- Background videos --- */
@@ -40,7 +45,7 @@ body {
 .scrim {
     position: fixed;
     inset: 0;
-    background: rgba(0, 180, 255, 0.15); /* Light blue tint */
+    background: rgba(10,37,64,0.90); /* Light blue tint */
     z-index: 1; /* Between video and content */
     pointer-events: none; /* Don’t block clicks */
     mix-blend-mode: screen; /* keeps highlights soft */
@@ -54,7 +59,7 @@ body {
     right: 0;
     padding: 0.2rem 1.25rem;
     /* <— reduces height */
-    background: rgba(38, 146, 235, 0.7) !important;
+    background: rgba(38, 146, 235, 0.8) !important;
     box-shadow: var(--shadow);
     backdrop-filter: saturate(20%) blur(2px);
     border-radius: 30px;
@@ -114,18 +119,28 @@ body {
 
 /* --- Hero content (centered) --- */
 .hero {
-    min-height: 100svh;
-    /* full viewport height, mobile-safe */
-    display: grid;
-    place-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 5rem 1rem 3rem;
 }
 
 .hero-inner {
-    max-width: 960px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* above scrim + video */
+    color: #ffffff;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
 }
+
 
 .brand-mark {
     display: inline-flex;
@@ -142,24 +157,24 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(3rem, 5vw, 8rem);
+    font-weight: bold;
     margin: .5rem 0 0.75rem;
     line-height: 1.1;
     text-shadow: 0 10px 24px rgba(0, 0, 0, .4);
 }
 
-.hero p {
-    font-size: clamp(1rem, 2.2vw, 1.25rem);
-    margin: 0 auto 1.25rem;
-    max-width: 65ch;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, .35);
-}
-
 /* --- Content section after hero --- */
 .content {
-    background: #fff;
-    color: #111;
     padding: 4rem 1.25rem;
+    color: #0a2540 ;
+    overflow-x: hidden;
+    background: radial-gradient(900px 600px at 85% -10%, rgb(246, 246, 246), 
+        transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgb(246, 248, 251), 
+        transparent 60%), 
+        linear-gradient(180deg,#ffffff, #ffffff,  60%, #ffffff);
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
 }
 
 .content .container {
