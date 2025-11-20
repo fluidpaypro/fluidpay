@@ -29,6 +29,8 @@ body {
 /* --- Background videos --- */
 .video-bg {
     position: fixed;
+    opacity: 0;
+    transition: opacity 0.6s ease;
     /* behind everything, fills screen */
     inset: 0;
     width: 100%;
@@ -37,7 +39,7 @@ body {
     z-index: -2;
     pointer-events: none;
     /* clicks pass through */
-    display: none;
+    display: block !important; /*always load the video*/
     /* default off; enabled via media queries below */
 }
 
@@ -183,14 +185,14 @@ body {
 /* Landscape / wider viewports -> show horizontal (desktop/laptop) */
 @media (min-aspect-ratio: 4/3) {
     .video-bg.landscape {
-        display: block;
+        opacity: 1;
     }
 }
 
 /* Portrait / taller viewports -> show vertical (mobile) */
 @media (max-aspect-ratio: 4/3) {
     .video-bg.portrait {
-        display: block;
+        opacity: 1;
     }
 }
 @media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
