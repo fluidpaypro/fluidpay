@@ -257,6 +257,11 @@ h2{
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.08); 
+    }
+
+    .aboutsec:first-of-type {
+      border-top: none;
     }
 
     .about-section {
@@ -264,19 +269,6 @@ h2{
         justify-content: space-between;
         gap: 8px;
         margin: 0;
-    }
-
-    .about{
-        background-color: #0A0F19;
-    }
-    .story{
-        background-color: #0B111B;
-    }
-    .mission{
-        background-color: #0C131E;
-    }
-    .vision{
-        background-color: #0D1522;
     }
 
     .about-text {
