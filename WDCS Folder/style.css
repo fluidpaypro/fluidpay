@@ -90,7 +90,7 @@ linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
 }
 
 .col-sm-4{
-	width: 100%;
+	width: 100%
 	height: 250px;
 	align-items: center;
     margin: rgba(38, 146, 235);    
@@ -146,7 +146,7 @@ font-weight: bold;
 	
 	}
 
-    @media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
+@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
   .navbar .nav-link {
     display: block; /* to stretch full width */
     width: 100%;  /* to ensure background fills width */
