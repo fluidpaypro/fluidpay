@@ -242,6 +242,10 @@ h2{
 }
 
 @media (max-width: 600px){
+    body {
+        background-color: #0B111B;
+    }
+
     .hero {
         min-height: auto;
     }
