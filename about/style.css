@@ -243,7 +243,7 @@ h2{
 
 @media (max-width: 600px){
     body {
-        background-color: #0B111B;
+        background: #0B111B !important;
     }
 
     .hero {
@@ -264,6 +264,19 @@ h2{
         justify-content: space-between;
         gap: 8px;
         margin: 0;
+    }
+
+    .about{
+        background-color: #0A0F19;
+    }
+    .story{
+        background-color: #0B111B;
+    }
+    .mission{
+        background-color: #0C131E;
+    }
+    .vision{
+        background-color: #0D1522;
     }
 
     .about-text {
