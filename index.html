@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FluidPay</title>
-    <link rel="icon" type="image/png" href="assets/Fluidpaytrim.png"> <!--image for tab icon-->
+    <link rel="icon" type="image/png" href="assets/images/Fluidpaytrim.png"> <!--image for tab icon-->
       
     <!-- Bootstrap for navbar only-->
     <link
@@ -12,7 +12,7 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style-home.css">
 </head>
 <body>
   <!-- Background video (landscape)-->
@@ -23,8 +23,8 @@
     loop
     playsinline
     preload="metadata"
-    poster="assets/backgroundp.png">
-    <source src="assets/background.mp4" type="video/mp4" />
+    poster="assets/images/backgroundp.png">
+    <source src="assets/videos/background.mp4" type="video/mp4" />
   </video>
 
   <!-- Overlay scrim for text readability over the background video -->
@@ -35,7 +35,7 @@
     <div class="container-fluid">
       <!--Brand link, currently no link provided, just a placeholder-->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img class="brand-logo" src="assets/Fluidwhite.png" alt="Fluidpay Logo">
+        <img class="brand-logo" src="assets/images/Fluidwhite.png" alt="Fluidpay Logo">
       </a>
       <!--hamburger button for mobile screens-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -46,12 +46,12 @@
       <!--collapsible navigation container-->
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="about/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="WDCS Folder/services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="ContactUs/contact.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#login">Log in</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li>
             <li class="nav-item ms-lg-1">
-                <a class="nav-link" href="#signup">Sign up</a>
+                <a class="nav-link" href="signup.html">Sign up</a>
             </li>
         </ul>
       </div>
@@ -99,6 +99,6 @@
   <script>
     document.documentElement.style.setProperty('--poster', "url('poster-landscape.jpg')");
   </script>
-  <script src="script.js"></script>
+  <script src="script/script-home.js"></script>
 </body>
 </html>
