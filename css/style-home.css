@@ -95,7 +95,7 @@ body {
     /* default color */
     font-weight: 500;
     padding: 0.75rem 1.25rem !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); 
+    /*text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); */
     display: inline-block;
     border-radius: 2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -221,4 +221,10 @@ body {
   .footer{
     padding-left: 5%;
 }
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }

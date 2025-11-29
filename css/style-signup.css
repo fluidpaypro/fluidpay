@@ -46,7 +46,7 @@ body {
     color: #ffffff;
     font-weight: 500;
     padding: 0.75rem 1.25rem !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    /*text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);*/
     display: inline-block;
     border-radius: 2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -69,14 +69,15 @@ body {
 }
 
 .fp-card {
-    background: rgba(15, 27, 56, 0.75);
+    max-width: 900px;
+    margin: 3rem auto;
+    background: rgba(10, 15, 23, 0.9);
     border: 1px solid #1c2a52;
-    border-radius: 18px;
-    padding: 32px 28px;
+    border-radius: 24px;
+    padding: 3rem 3.25rem;
     margin-top: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .fp-header {
@@ -86,14 +87,17 @@ body {
 
 .fp-header h1 {
     color: #e6eefc;
-    font-size: clamp(22px, 4vw, 28px);
-    margin-bottom: 8px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
 }
 
 .fp-sub {
-    margin: 0;
-    color: #a9b5cc;
-    font-size: clamp(13px, 2vw, 14px);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d6e4ff;
+    margin-bottom: 2rem;
 }
 
 .fp-form-group {
@@ -152,8 +156,8 @@ body {
 }
 
 .fp-checkbox-label {
-    font-size: clamp(13px, 2vw, 14px);
-    color: #cdd8ef;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .fp-btn {
@@ -233,7 +237,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .navbar {
         top: 10px;
         width: calc(100% - 20px);
@@ -279,4 +283,9 @@ body {
         font-size: 13px;
         padding: 1.5rem 1rem;
     }
+}*/
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
