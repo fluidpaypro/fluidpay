@@ -1,0 +1,94 @@
+
+/* --- Navbar overlay --- */
+.navbar { 
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    padding: 0.2rem 1.25rem;
+    background: rgba(38, 146, 235, 0.8) !important;
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(20%) blur(2px);
+    border-radius: 30px;
+    width: calc(100% - 35px);
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Keep brand text visible on dark video */
+.navbar .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    /* reduced from 112px for proportion */
+    width: auto;
+    margin-right: .5rem;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6));
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem !important;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #0a2540;
+    background-color: #ffffff;
+    text-shadow: none !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) contrast(200%);
+}
+
+.navbar .active {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  color: #ffffff !important;
+}
+
+.navbar .nav-link.active:hover {
+    color: #0a2975 !important;   /* dark blue hover color */
+}
+
+/* --- Choose video by viewport aspect ratio --- */
+/* Landscape / wider viewports -> show horizontal (desktop/laptop) */
+
+@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
+  .navbar .nav-link {
+    display: block; /* to stretch full width */
+    width: 100%;  /* to ensure background fills width */
+    border-radius: 2rem;
+    padding: 0.9rem 1.25rem !important; /* slightly taller for touch devices */
+    text-align: left;/* to align text flush left */
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    background-color: #ffffff !important;
+    color: #0a2540 !important;
+    box-shadow: none; /* for cleaner mobile dropdown */
+  }
+
+}
