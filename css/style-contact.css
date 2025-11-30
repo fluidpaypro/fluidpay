@@ -160,13 +160,13 @@ select option {
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, #2f7cf6, #60f5ff);
-  color: #041225;
+  background: #2f7bf680;
+  color: #cdd8ef;
   border: 0;
 }
 
 .btn.primary:hover {
-  background: linear-gradient(90deg, #2f7bf680, #60eaff82);
+  background:  rgba(38, 146, 235);
   color: #cdd8ef;
 }
 
@@ -178,8 +178,8 @@ select option {
 
 .btn.ghost:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: #60f5ff;
-  color: #60f5ff;
+  border-color: rgba(38, 146, 235);
+  color: rgba(38, 146, 235);
 }
 
 .form-success {
@@ -322,3 +322,4 @@ select option {
         padding: 1.5rem 1rem;
     }
 }*/
+

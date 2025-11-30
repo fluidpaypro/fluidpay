@@ -16,27 +16,19 @@ body {
 }
 
 body {
-    margin: 0;
-    color: rgba(109, 240, 255, .10);
-    overflow-x: hidden;
-    background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), 
+    margin: 0; 
+/*    background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), 
         transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgba(90, 167, 255, .10), 
         transparent 60%), 
-        linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);
+        linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);*/
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background-color: #020617; 
+    background-image: url("../assets/images/aboutbg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
 }
-
-/* --- Background videos --- */
-
-.fp-about-hero {
-    
-    border-radius: 12px;
-    padding: 2rem 2.25rem;
-    margin-bottom: 2rem;
-}
-
-/* --- Navbar overlay --- */
-
 
 /* --- Hero content (centered) --- */
 .hero {

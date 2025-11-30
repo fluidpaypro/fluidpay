@@ -1,0 +1,83 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base background -->
+  <defs>
+    <radialGradient id="bgGlow" cx="75%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#0b1220"></stop>
+      <stop offset="40%" stop-color="#020617"></stop>
+      <stop offset="100%" stop-color="#020617"></stop>
+    </radialGradient>
+
+    <!-- Subtle symbol style -->
+    <style>
+      .digit {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+        font-weight: 500;
+        fill: rgba(148, 163, 184, 0.22); /* slate-400 @ ~22% */
+      }
+      .digit.glow {
+        fill: rgba(56, 189, 248, 0.32); /* cyan-ish accent */
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1440" height="900" fill="url(#bgGlow)"></rect>
+
+  <!-- Cluster left -->
+  <g font-size="26">
+    <text class="digit">0</text>
+    <text class="digit" x="40" y="70">1</text>
+    <text class="digit" x="80" y="40">€</text>
+    <text class="digit glow" x="120" y="90">$</text>
+    <text class="digit" x="30" y="140">¥</text>
+    <text class="digit" x="90" y="180">£</text>
+  </g>
+
+  <!-- Mid-left vertical stream -->
+  <g font-size="22" transform="translate(160,140)">
+    <text class="digit">1</text>
+    <text class="digit" y="40">0</text>
+    <text class="digit glow" y="80">€</text>
+    <text class="digit" y="120">1</text>
+    <text class="digit" y="160">$</text>
+    <text class="digit" y="200">0</text>
+    <text class="digit" y="240">¥</text>
+  </g>
+
+  <!-- Centre subtle diagonal -->
+  <g font-size="30" transform="translate(540,160)">
+    <text class="digit glow">1</text>
+    <text class="digit" x="40" y="40">0</text>
+    <text class="digit" x="80" y="80">€</text>
+    <text class="digit glow" x="120" y="120">$</text>
+    <text class="digit" x="160" y="160">1</text>
+    <text class="digit" x="200" y="200">£</text>
+  </g>
+
+  <!-- Right-side soft symbols -->
+  <g font-size="24" transform="translate(1080,120)">
+    <text class="digit">€</text>
+    <text class="digit" x="40" y="50">1</text>
+    <text class="digit glow" x="0" y="100">$</text>
+    <text class="digit" x="40" y="150">0</text>
+    <text class="digit" x="-10" y="200">¥</text>
+  </g>
+
+  <!-- Lower area scatter -->
+  <g font-size="22" transform="translate(360,520)">
+    <text class="digit">0</text>
+    <text class="digit glow" x="40" y="40">€</text>
+    <text class="digit" x="80" y="80">1</text>
+    <text class="digit" x="140" y="40">$</text>
+    <text class="digit" x="200" y="100">0</text>
+    <text class="digit" x="260" y="60">£</text>
+  </g>
+
+  <!-- Very soft bottom-right -->
+  <g font-size="20" transform="translate(980,560)">
+    <text class="digit">1</text>
+    <text class="digit" x="40" y="30">0</text>
+    <text class="digit" x="20" y="70">€</text>
+    <text class="digit glow" x="60" y="110">$</text>
+    <text class="digit" x="10" y="150">¥</text>
+  </g>
+</svg>
