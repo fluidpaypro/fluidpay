@@ -1,51 +1,59 @@
+
+/*David Kenny-Vaughan, CSS- Services page
+Universal selector to display margin, padding, borders and font to many elements for consistency https://www.w3schools.com/cssref/sel_all.php*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-
+/* creating padding within the body, background colour gradient, text color, a minimum height and font in the body*/
 body {
     background: linear-gradient(180deg, #0b1220 0%, #0a1018 40%, #050812 100%);
-    color: #e6eefc;
     min-height: 100vh;
     padding-top: 90px;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-
+/*creating a max width https://www.w3schools.com/cssref/pr_dim_max-width.php for responsive design. adding margins and aligning text to the center. */
 .container1 {
     max-width: 900px;
     margin: 30px auto 40px;
     padding: 0 20px;
     text-align: center;
+    
 }
 
 .container1 h1 {
+/*Setting a minimum font-size for <h1> within the container for responsiveness, setting margin and text-colour. */
     font-size: clamp(28px, 5vw, 48px);
     margin-bottom: 20px;
     color: #e6eefc;
 }
-
+/*Determining font-size for  <p> within the container, font-colour, line height and margins*/
 .container1 p {
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(22px, 2vw, 16px);
     line-height: 1.6;
     color: #a9b5cc;
     margin-bottom: 15px;
 }
-
+/*Determining font-size for  <h3> within the container, font-colour and margins*/
 .container1 h3 {
     font-size: clamp(20px, 3vw, 24px);
     margin-top: 30px;
     margin-bottom: 40px;
     color: #dce6fa;
+    font-weight: bold;
 }
+
+/*Determinining the maximum container size for responsiveness, padding and margins*/ 
 
 .container {
     max-width: 1200px;
     margin: 0 auto 60px;
     padding: 0 20px;
 }
-
+/*Determinining the border, border-radius (curvature), border weight, backdrop filter (https://www.w3schools.com/cssref/css3_pr_backdrop-filter.php), 
+transition (change the size when hovering over https://www.w3schools.com/cssref/css3_pr_transition.phpand height*/ 
 .card {
     background: rgba(15, 27, 56, 0.75);
     border: 1px solid #1c2a52;
@@ -58,27 +66,32 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+/* Creating a hover effect when moving mouse over each card. https://www.w3schools.com/css/css3_2dtransforms.asp*/
+     transform: translateY(-5px);
+     /* creating a box shadow during hover */
     box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65);
 }
-
+/*Creating a box shadow effect during hover over the card images with opacity of 0.5. https://www.w3schools.com/css/css3_shadows.asp*/
+.card-img-top:hover {
+    box-shadow: 0 0 2px 1px #dcdfe3;
+    opacity: 0.5;
+}
+*
 .card-img-top {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #1c2a52;
+    /*Creating a transition effect whilst hobering over an element https://www.w3schools.com/css/css3_transitions.asp*/ 
     transition: opacity 0.3s ease;
 }
 
-.card:hover .card-img-top {
-    opacity: 0.8;
-}
-
+/*Creating a transparent background and padding within the card element*/ 
 .card-body {
     background: transparent;
     padding: 20px;
 }
-
+/*Aligning text within the cards to be centered, colored,and determining the font-weight https://www.w3schools.com/cssref/pr_font_weight.php and size*/  
 .card-text {
     text-align: center;
     color: #e6eefc;
@@ -86,13 +99,15 @@ body {
     font-size: clamp(14px, 2vw, 16px);
     margin: 0;
 }
-
+/*Styling the margin with padding, aligning the text centre, white text and font-size determined*/ 
 .footer {
     color: white;
     padding: 2rem 0;
     text-align: center;
     font-size: 14px;
 }
+/*Additional responsive design for elements not covered within Bootstrap styling. https://www.w3schools.com/css/css_rwd_mediaqueries.asp 
+the media queries cover 3 different screen sizes*/ 
 
 @media (max-width: 991.98px) {
     .container1 {

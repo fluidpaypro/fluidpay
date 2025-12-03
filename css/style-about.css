@@ -132,19 +132,19 @@ p{
     color:rgba(38, 146, 235)
 }
 
-.footer{
+.footer {
     color: white;
-    padding-left: 15%;
-    padding-top: 5px;
-    padding-top: 5px;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 14px;
 }
 
-@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
+/*@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
 
-  .footer{
+/*  .footer{
     padding-left: 5%;
 }
-}
+}*/
 
 @media (max-width: 768px) {
     .about-section {
@@ -228,8 +228,8 @@ p{
         margin-bottom: 2px;
     }
 
-    .footer{
+    /*.footer{
         font-size:0.7rem;
         padding-bottom: 4px;
-    }
+    }*/
 }
