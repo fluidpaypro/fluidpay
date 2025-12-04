@@ -127,7 +127,7 @@ p{
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        overflow: visible;/*to hide scroll overflow inside each section */
+        overflow: visible;
     }
 
     .about-section {
