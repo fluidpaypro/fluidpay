@@ -23,7 +23,7 @@ body {
 .fp-card {
     max-width: 900px;
     margin: 3rem auto;
-    background: rgba(10, 15, 23, 0.9);
+    background: rgba(15, 27, 56, 0.75);
     border: 1px solid #1c2a52;
     border-radius: 24px;
     padding: 3rem 3.25rem;
@@ -161,7 +161,7 @@ body {
 }
 
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar {
         top: 10px;
         width: calc(100% - 20px);
@@ -207,4 +207,4 @@ body {
         font-size: 13px;
         padding: 1.5rem 1rem;
     }
-}*/
+}
