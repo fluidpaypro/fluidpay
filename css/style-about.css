@@ -1,43 +1,46 @@
-/* --- Base reset --- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/*styling file created by John Selvin John*/
+
+/* the below is used to apply box sizing for all elements */ 
+*,/* https://www.w3schools.com/cssref/sel_all.php */
+*::before,/*https://www.w3schools.com/cssref/sel_before.php*/
+*::after /*https://www.w3schools.com/cssref/sel_after.php - https://www.youtube.com/watch?v=zGiirUiWslI*/{
+    box-sizing: border-box; /*to ensure that the border & padding does not increase total width - https://www.w3schools.com/css/css3_box-sizing.asp*/
 }
 
-:root {
+/*:root { to be removed
   --shadow: 0 18px 60px rgba(10,37,64,0.95);
   /* to create a CSS variable you can reuse for shadows - reference from W3schools https://www.w3schools.com/css/css3_variables.asp */
-}
+/*}*/
 
 html,
 body {
-    height: 100%;
+    height: 100%;/*to ensure that the root, i.e html and body fills the entire screen - https://www.w3schools.com/howto/howto_css_full_page.asp*/
 }
 
 body {
-    margin: 0; 
-/*    background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), 
+    margin: 0; /*to remove unwanted white space around the webpage*/
+/*    background: radial-gradient(900px 600px at 85% -10%, rgba(109, 240, 255, .10), to be removed
         transparent 60%), radial-gradient(1000px 500px at 10% 0%, rgba(90, 167, 255, .10), 
         transparent 60%), 
         linear-gradient(180deg,#0a0f17, #0b1220,  60%, #070b14);*/
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     background-color: #020617; 
-    background-image: url("../assets/images/aboutbg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center;
+    background-image: url("../assets/images/aboutbg.svg");/*to include the bg image*/
+    background-size: cover;/* to make the bg image cover the entire screen view*/
+    background-repeat: no-repeat;/*to ensure that the bg image is not repeated - https://www.w3schools.com/css/css_background_repeat.asp*/
+    background-attachment: fixed; /*to ensure that the bg image does not move, to create the content scroll over view - https://www.w3schools.com/css/css_background_attachment.asp*/
+    background-position: center;/*to center the image*/
 }
 
 /* --- Hero content (centered) --- */
 .hero {
     width: 100%;
-    min-height: 100vh; /*--- to get the section to whole page*/
+    min-height: 100vh; /*--- to spread the section to whole page*/
     padding-top: 30px;
 
 }
 
+/* to be removed
 .hero-inner {
     position: absolute;
     top: 50%;
@@ -74,7 +77,6 @@ body {
     text-shadow: 0 10px 24px rgba(0, 0, 0, .4);
 }
 
-/* --- Content section after hero --- */
 .content {
     padding: 4rem 1.25rem;
     color: white;
@@ -88,28 +90,30 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
+    */
+
 .aboutsec {
     display: flex;
     flex-direction:row;
-    min-height:100vh;
+    min-height:100vh;/*to ensure that each row takes one full screen height*/
 }
 
 .about-section {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; /*to provide a 2*16px gap between image and text*/
     margin: 2rem auto;
     max-width: 1000px;
 }
 
 .aboutimg {
-    width: 35%;
+    width: 35%;/*to ensure that all images take 35% of the row width on regular screens*/
     height: auto;
     border-radius: 20px;
 }
 
 .about-text {
-    width: 65%;
+    width: 65%;/*to ensure that all text block takes 65% of the row width on regular screens*/
     color: #ffffff; 
 }
 
@@ -139,16 +143,16 @@ p{
     font-size: 14px;
 }
 
-/*@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
+/*@media (max-width: 991.98px) {  /* Bootstrap lg breakpoint  to be removed
 
 /*  .footer{
     padding-left: 5%;
 }
 }*/
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {/*styling for tablets and phones*/
     .about-section {
-        flex-direction: column;
+        flex-direction: column;/*to stack the image and text vertically in smaller screens*/
         text-align: center;
     }
 
@@ -163,26 +167,23 @@ p{
     }
 
     body {
-        background: #0B111B !important;
-    }
-
-    .hero {
-        min-height: auto;
+        background: #0B111B !important;/*to override the SVG background on smaller screens*/
     }
 
     .aboutsec {
-        height: calc(100vh - 70px);
-        padding: 70px 16px 10px;
+        height: calc(100vh - 70px);/*to ensure that in smaller screens the image + text block for each section, along with navbar is showin in one screen*/
+        padding: 70px 16px 10px;/*to esure that content is always shown below the navbar*/
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        border-top: 1px solid rgba(255, 255, 255, 0.5); 
+        overflow: hidden;/*to hide scroll overflow inside each section */
+        border-top: 1px solid rgba(255, 255, 255, 0.5); /*to add a thin divider line between each sections*/
     }
 
-    .aboutsec:first-of-type {
+    .aboutsec:first-of-type {/*to ensure that above mentioned thin divider line does not appear for the first section - https://www.w3schools.com/cssref/sel_first-of-type.php*/
       border-top: none;
     }
+
 
     .about-section {
         flex-direction: column;
@@ -211,7 +212,7 @@ p{
         font-size: 1rem;
     }
 
-/*    .about-text ul{
+/*    .about-text ul{ to be removed
         margin: 0 0 4px;
         padding-left: 1.1rem;
     }*/
@@ -228,7 +229,7 @@ p{
         margin-bottom: 2px;
     }
 
-    /*.footer{
+    /*.footer{ to be removed
         font-size:0.7rem;
         padding-bottom: 4px;
     }*/

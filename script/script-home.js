@@ -24,19 +24,19 @@ document.addEventListener("DOMContentLoaded",() => { //DOMContentLoaded is used 
 
     function showtitleMessages(){
         heroEl.classList.remove("fade-in-up");//to clear the previous animation
-        void heroEl.offsetWidth;
+        void heroEl.offsetWidth;// to trigger reflow to ensure no intermittent animation issue - https://www.youtube.com/watch?v=C6h49T9dKrE
 
         heroEl.textContent=titleMessages[index];//helps to loop through the list of messages in the array
 
-        heroEl.classList.add("fade-in-up");//loads the animation again
+        heroEl.classList.add("fade-in-up");//loads the animation again for next message
     }
 
     function scheduleNext(){
         const currentDuration = durations[index];
-        setTimeout(()=>{
-            index=(index+1)%titleMessages.length;
+        setTimeout(()=>{//to run the next message once the current timing expires
+            index=(index+1)%titleMessages.length;//to identify end of array and start from index 0 again
             showtitleMessages();
-            scheduleNext();
+            scheduleNext();// this is to create an indirect loop without using a FOR or WHILE loop
         }, currentDuration);
     }
     showtitleMessages();
