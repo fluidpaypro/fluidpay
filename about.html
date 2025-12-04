@@ -1,24 +1,17 @@
-<!--Page created by John Selvin John-->
 
-<!DOCTYPE HTML>
-    <head>
-        <meta charset="UTF-8">
-        <!--https://www.w3schools.com/tags/tag_meta.asp-->
-        <meta name="description" content="Learn about FluidPay — our mission, values, and commitment to delivering fast, secure, next-generation payment solutions worldwide.">
-        <meta name="keywords" content="About FluidPay, fintech company, global payments, secure transactions, instant payments, digital wallet, cross-border transfers">
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--code to make the page responsive to different devices-->
-
-        <!--Open graph tags used to control how the website appears when the link is shared, especially in networking & social media sites-->
-        <meta property="og:title" content="About FluidPay – Next-Generation Global Payments">
-        <meta property="og:description" content="Discover FluidPay’s story and how we are transforming global money movement with secure and instant payment solutions.">
-        <meta property="og:image" content="https://fluidpaypro.github.io/fluidpay/assets/images/aboutimgog.png">
-        <meta property="og:url" content="https://fluidpaypro.github.io/fluidpay/about.html">
-        <meta property="og:type" content="website">
-    
-        <!--JSON script used to include machine readable data for search engine optimisation-->
-        <script type="application/ld+json">
-        {
+<!doctype html>
+<head>
+<meta charset=UTF-8>
+<meta name=description content="Learn about FluidPay — our mission, values, and commitment to delivering fast, secure, next-generation payment solutions worldwide.">
+<meta name=keywords content="About FluidPay, fintech company, global payments, secure transactions, instant payments, digital wallet, cross-border transfers">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta property=og:title content="About FluidPay – Next-Generation Global Payments">
+<meta property=og:description content="Discover FluidPay’s story and how we are transforming global money movement with secure and instant payment solutions.">
+<meta property=og:image content=https://fluidpaypro.github.io/fluidpay/assets/images/aboutimgog.png>
+<meta property=og:url content=https://fluidpaypro.github.io/fluidpay/about.html>
+<meta property=og:type content=website>
+<script type=application/ld+json>
+{
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FluidPay",
@@ -26,127 +19,104 @@
             "logo": "https://fluidpaypro.github.io/fluidpay/assets/images/Fluidwhite.png",
             "description": "Learn more about FluidPay and our commitment to secure, instant global payments."
         }
-        </script>
-
-        <!-- Bootstrap CSS (for navbar styles) -->
-         <!--https://getbootstrap.com/docs/5.3/getting-started/introduction/-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style-navbar.css">
-        <link rel="stylesheet" href="css/style-about.css">
-
-        <!--title tag optimised for search engine-->
-        <title>About FluidPay | Our Mission, Vision & Fintech Innovation</title>
-        <link rel="icon" type="image/png" href="assets/images/Fluidpaytrim.png"> <!--image for tab icon-->
-    </head>
-
-    <body>
-        <!-- NAVBAR-->
-        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Primary">
-            <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="index.html"> <!--clicking the logo takes the user to the home page-->
-                    <img class="brand-logo" src="assets/images/Fluidwhite.png" alt="Fluidpay Logo">
-                </a>
-                <!--hamburger button for mobile screens-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"
-                        style="border-color:#fff;">
-                </button>
-
-                <!--collapsible navigation container-->
-                <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                    <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Log in</a></li>
-                            <li class="nav-item ms-lg-1">
-                            <a class="nav-link" href="signup.html">Sign up</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- HERO -->
-        <main class="hero" id="home">
-            <section class="aboutsec">
-                <div class="about-section about">
-                    <img class="aboutimg" src="assets/images/aboutimg.webp" alt="Fluidpay Logo">
-                    <div class="about-text">
-                        <h2>About FluidPay</h2>
-                        <p>
-                            FluidPay is a modern digital payments platform built for a world that never stops moving.
-                            We make it simple to send, spend, invest, and protect your money - securely and instantly.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <div class="divider"></div>
-            <section  class="aboutsec">
-                <div class="about-section story">
-                    <div class="about-text">
-                        <h2>Our Story</h2>
-                        <p>
-                            FluidPay was founded with a bold goal: to reinvent how people interact with money. Traditional financial systems are slow, complex, and full of friction. 
-                        </p>
-                        <p>
-                            We wanted something better - a fast, transparent, and intuitive financial platform built for today’s digital world.
-                        </p>
-                        <p>
-                            Today, FluidPay is growing into a global movement that reflects the way people truly live: mobile-first, borderless, and always connected.
-                        </p>
-                    </div>
-                        <img class="aboutimg" src="assets/images/robot.webp" alt="Robot head" loading="lazy"><!--loading="lazy" added to reduce load speed and make the initial load lighter to increase speed-->
-                </div>
-            </section>
-            <div class="divider"></div>
-            <section  class="aboutsec">
-                <div class="about-section mission">
-                    <img class="aboutimg" src="assets/images/rocket.webp" alt="Ascending rocket" loading="lazy"><!--loading="lazy" added to reduce load speed and make the initial load lighter to increase speed-->
-                    <div class="about-text">
-                        <h2>Our Mission</h2>
-                        <p>
-                            Our mission is to give everyone fast, secure, and intelligent financial freedom. 
-                            From instant payments to accessible insurance and smart crypto investing, we’re building tools that make everyday financial decisions simple and stress-free.
-                        </p> 
-                        <ul>
-                            <li class="abtlist">Make digital finance simple and intuitive.</li>
-                            <li class="abtlist">Enable money to move across borders in seconds.</li>
-                            <li class="abtlist">Embed trust, transparency, and security into every transaction.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <div class="divider"></div>
-            <section  class="aboutsec">
-                <div class="about-section vision">
-                    <div class="about-text">
-                        <h2>Our Vision</h2>
-                        <p>
-                            We’re working toward a world where financial freedom is instant, inclusive, and global.
-                        </p>
-                        <p>
-                            A world where anyone, anywhere, can participate fully in the digital economy - barriers, without complications, and without borders.
-                        </p>
-                        <p>
-                            <span class="ital">FluidPay isn’t just another payment platform. It’s a smarter financial ecosystem built for the next generation.</span>
-                        </p>
-                    </div>
-                    <img class="aboutimg" src="assets/images/vision.webp" alt="Galaxy in a cube" loading="lazy"><!--loading="lazy" added to reduce load speed and make the initial load lighter to increase speed-->
-                </div>
-            </section>
-        </main>
-        <div class="divider-long"></div>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <div>© 2025 Fluidpay. All rights reserved.</div>
-            </div>
-        </footer>
-        <!-- Bootstrap JS (for navbar collapse and dropdown options) -->
-            <!--https://getbootstrap.com/docs/5.3/getting-started/introduction/-->
-        <script 
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-        </script>
-    </body>
-</html>
+</script>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css rel=stylesheet>
+<link rel=stylesheet href=css/style-about.css>
+<title>About FluidPay | Our Mission, Vision & Fintech Innovation</title>
+<link rel=icon type=image/png href=assets/images/Fluidpaytrim.png>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top" role=navigation aria-label=Primary>
+<div class=container-fluid>
+<a class="navbar-brand d-flex align-items-center" href=index.html>
+<img class=brand-logo src=assets/images/Fluidwhite.png alt="Fluidpay Logo">
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#mainNav aria-controls=mainNav aria-expanded=false aria-label="Toggle navigation" style=border-color:#fff>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id=mainNav>
+<ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+<li class=nav-item><a class="nav-link active" href=about.html>About</a></li>
+<li class=nav-item><a class=nav-link href=services.html>Services</a></li>
+<li class=nav-item><a class=nav-link href=contact.html>Contact Us</a></li>
+<li class=nav-item><a class=nav-link href=login.html>Log in</a></li>
+<li class="nav-item ms-lg-1">
+<a class=nav-link href=signup.html>Sign up</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main class=hero id=home>
+<section class=aboutsec>
+<div class="about-section about">
+<img class=aboutimg src=assets/images/aboutimg.webp alt="Fluidpay Logo">
+<div class=about-text>
+<h2>About FluidPay</h2>
+<p>
+FluidPay is a modern digital payments platform built for a world that never stops moving. We make it simple to send, spend, invest, and protect your money - securely and instantly.
+</p>
+</div>
+</div>
+</section>
+<div class=divider></div>
+<section class=aboutsec>
+<div class="about-section story">
+<div class=about-text>
+<h2>Our Story</h2>
+<p>
+FluidPay was founded with a bold goal: to reinvent how people interact with money. Traditional financial systems are slow, complex, and full of friction.
+</p>
+<p>
+We wanted something better - a fast, transparent, and intuitive financial platform built for today’s digital world.
+</p>
+<p>
+Today, FluidPay is growing into a global movement that reflects the way people truly live: mobile-first, borderless, and always connected.
+</p>
+</div>
+<img class=aboutimg src=assets/images/robot.webp alt="Robot head" loading=lazy>
+</div>
+</section>
+<div class=divider></div>
+<section class=aboutsec>
+<div class="about-section mission">
+<img class=aboutimg src=assets/images/rocket.webp alt="Ascending rocket" loading=lazy>
+<div class=about-text>
+<h2>Our Mission</h2>
+<p>
+Our mission is to give everyone fast, secure, and intelligent financial freedom. From instant payments to accessible insurance and smart crypto investing, we’re building tools that make everyday financial decisions simple and stress-free.
+</p>
+<ul>
+<li class=abtlist>Make digital finance simple and intuitive.</li>
+<li class=abtlist>Enable money to move across borders in seconds.</li>
+<li class=abtlist>Embed trust, transparency, and security into every transaction.</li>
+</ul>
+</div>
+</div>
+</section>
+<div class=divider></div>
+<section class=aboutsec>
+<div class="about-section vision">
+<div class=about-text>
+<h2>Our Vision</h2>
+<p>
+We’re working toward a world where financial freedom is instant, inclusive, and global.
+</p>
+<p>
+A world where anyone, anywhere, can participate fully in the digital economy - barriers, without complications, and without borders.
+</p>
+<p>
+<span class=ital>FluidPay isn’t just another payment platform. It’s a smarter financial ecosystem built for the next generation.</span>
+</p>
+</div>
+<img class=aboutimg src=assets/images/vision.webp alt="Galaxy in a cube" loading=lazy>
+</div>
+</section>
+</main>
+<div class=divider-long></div>
+<footer class=footer>
+<div class=container>
+<div>© 2025 Fluidpay. All rights reserved.</div>
+</div>
+</footer>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js></script>
+</body>
