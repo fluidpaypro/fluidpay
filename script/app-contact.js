@@ -1,30 +1,42 @@
+/* ==========================================================
+   CONTACT FORM — VALIDATION
+   - Shows inline messages under each field while user types
+   - Blocks submission if any rule fails
+   - On success: resets the form and shows a short success text
+   ========================================================== */
+
+/* Write a message into the <small class="error" data-for="..."> of a field */
 function showError(key, msg) {
   var el = document.querySelector('.error[data-for="' + key + '"]');
   if (el) el.textContent = msg || '';
 }
 
+/* Very small email pattern check (simple regex) */
 function isEmail(str) {
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(str);
 }
 
-function validateName(v) { return v.trim().length >= 2 ? true : 'Please enter your full name.'; }
-function validateEmail(v) { return isEmail(v) ? true : 'Enter a valid email address.'; }
+/* Field validators: return true or an error string */
+function validateName(v)    { return v.trim().length >= 2 ? true : 'Please enter your full name.'; }
+function validateEmail(v)   { return isEmail(v) ? true : 'Enter a valid email address.'; }
 function validateSubject(v) { return v.trim().length >= 3 ? true : 'Subject should be at least 3 characters.'; }
-function validateTopic(v) { return v.trim().length > 0 ? true : 'Please select a topic.'; }
+function validateTopic(v)   { return v.trim().length > 0 ? true : 'Please select a topic.'; }
 function validateMessage(v) { return v.trim().length >= 10 ? true : 'Message should be at least 10 characters.'; }
 function validateConsent(v) { return v === true ? true : 'Please agree to be contacted.'; }
 
+/* Grab the form and inputs once */
 var form = document.getElementById('contactForm');
 
 if (form) {
-  var nameEl = document.getElementById('name');
-  var emailEl = document.getElementById('email');
+  var nameEl    = document.getElementById('name');
+  var emailEl   = document.getElementById('email');
   var subjectEl = document.getElementById('subject');
-  var topicEl = document.getElementById('topic');
+  var topicEl   = document.getElementById('topic');
   var messageEl = document.getElementById('message');
   var consentEl = document.getElementById('consent');
 
+  /* Live validation while typing/changing */
   if (nameEl) {
     nameEl.addEventListener('input', function () {
       var r = validateName(nameEl.value);
@@ -67,6 +79,7 @@ if (form) {
     });
   }
 
+  /* Final check on submit (demo: prevent real post) */
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -96,15 +109,15 @@ if (form) {
     showError('consent', r6 === true ? '' : r6);
     if (r6 !== true) ok = false;
 
+    /* Abort if any rule failed */
     if (!ok) return;
 
+    /* Success: clear form and briefly show a status message */
     form.reset();
     var success = document.querySelector('.form-success');
     if (success) {
       success.hidden = false;
-      setTimeout(function () {
-        success.hidden = true;
-      }, 4000);
+      setTimeout(function () { success.hidden = true; }, 4000);
     }
   });
 }
