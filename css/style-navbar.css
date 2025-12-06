@@ -1,21 +1,21 @@
+/*Page written by Team - contributions from all members*/
 
-/* --- Navbar overlay --- */
 .navbar { 
-    position: fixed;
-    top: 15px;
+    position: fixed;/*to ensure that the navbar does not scroll away and stay fixed on top of the page*/
+    top: 15px;/*to move the navbar 15px down from the top of the viewport (screen), to creating a floating effect rather than being fixed to top of the upper screen end*/
     left: 0;
     right: 0;
     padding: 0.2rem 1.25rem;
-    background: rgba(38, 146, 235, 0.8) !important;
+    background: rgba(38, 146, 235, 0.8) !important; /*to provide a semi transparent blue and create a glass effect, especially when the background video and contents scroll behind the navbar*/
     box-shadow: var(--shadow);
-    backdrop-filter: saturate(20%) blur(2px);
+    backdrop-filter: saturate(20%) blur(2px); /*to provide a froasted glass effect to the navbar*/
     border-radius: 30px;
-    width: calc(100% - 35px);
+    width: calc(100% - 35px);/*to make the navbar slightly narrower than the viewport, to add to the floating effect referred above*/
     margin: 0 auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Keep brand text visible on dark video */
+/* to keep brand text visible on dark video */
 .navbar .navbar-brand {
     color: #fff;
     font-weight: 700;
@@ -26,7 +26,6 @@
 
 .navbar .navbar-brand img {
     height: 40px;
-    /* reduced from 112px for proportion */
     width: auto;
     margin-right: .5rem;
     transition: transform 0.3s ease;
@@ -36,7 +35,7 @@
 .navbar .nav-link {
     color: #ffffff;
     font-weight: 500;
-    padding: 0.75rem 1.25rem !important;
+    padding: 0.75rem 1.25rem !important;/*to provide a bigger clickable area than provided by bootstrap default css*/
     display: inline-block;
     border-radius: 2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -56,10 +55,6 @@
     border-color: #fff;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1) contrast(200%);
-}
-
 .navbar .active {
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
@@ -72,8 +67,6 @@
     color: #0a2975 !important;   /* dark blue hover color */
 }
 
-/* --- Choose video by viewport aspect ratio --- */
-/* Landscape / wider viewports -> show horizontal (desktop/laptop) */
 
 @media (max-width: 991.98px) {  /* Bootstrap lg breakpoint */
   .navbar .nav-link {
